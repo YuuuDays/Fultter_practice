@@ -45,4 +45,5 @@ app.*.map.json
 /android/app/release
 
 #env of pass
-.txt
+*.txt
+テスト用トークン置き場.txt
