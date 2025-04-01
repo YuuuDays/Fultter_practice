@@ -1,7 +1,22 @@
 import 'package:flutter/material.dart';
 
-class SerchScreen extends StatefulWidget{
-    const SerchScreen({super.key});
+class SearchScreen extends StatefulWidget{
+    const SearchScreen({super.key});
 
-    
+    @override
+    State<SearchScreen> createState()=>_SerchScreenState();
+}
+
+class _SerchScreenState extends State<SearchScreen>
+{
+    @override
+    Widget build(BuildContext context)
+    {
+        return Scaffold(
+            appBar:AppBar(
+                title:const Text('Qiita Search'),
+            ),
+            body:Container(),
+        );
+    }
 }
