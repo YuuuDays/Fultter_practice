@@ -47,3 +47,4 @@ app.*.map.json
 #env of pass
 *.txt
 テスト用トークン置き場.txt
+.env
