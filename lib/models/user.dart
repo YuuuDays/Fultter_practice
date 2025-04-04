@@ -15,5 +15,6 @@ class User{
       profileImageUrl: json['profile_image_url'] as String,
     );
   }
+  //ここに追加
   
 }
