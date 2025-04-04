@@ -18,4 +18,17 @@ class Article{
     required this.createdAt,
     required this.url,
   });
+
+  // JSONからArticleを生成するファクトリコンストラクタ
+  factory Article.fromJson(dynamic json){
+    return Article(
+      title:json['title'] as String,
+      user:User.fromJson(json['user']), //user.fromJson()を使ってUserを生成する
+      url:json['url'] as String,
+      createdAt: DateTime.parse(json['created_at'] as String), // DateTime.parse()を使って文字列をDateTimeに変換
+      likesCount: json['likes_count'] as int,
+      tags: List<String>.from(json['tags'].map((tag) => tag['name'])), // List<String>.from()を使ってList<String>に変換
+    );  
+  }
+  
 }
